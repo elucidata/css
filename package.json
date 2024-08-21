@@ -1,0 +1,22 @@
+{
+  "name": "css",
+  "version": "1.0.0",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "test": "bun test"
+  },
+  "devDependencies": {
+    "@happy-dom/global-registrator": "^14.12.3",
+    "@types/bun": "^1.1.6",
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "optionalDependencies": {
+    "@types/react": "^18.3.4",
+    "preact": "^10.23.1",
+    "react": "^18.3.1"
+  }
+}
