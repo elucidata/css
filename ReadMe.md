@@ -2,6 +2,16 @@
 
 Co-locate your CSS with your components. For use in React/Preact/Vanilla... Probably SolidJS too.
 
+## Installation
+
+```
+bun add github:elucidata/css
+```
+
+Or npm, pnpm, yarn... Whatever.
+
+## Example Usage
+
 ```tsx
 import { css } from "css"
 
@@ -43,6 +53,8 @@ const Card = comp("div.Card").css`
 
 Styles using the syntax are scoped to the component.
 
+## Configuration
+
 ```tsx
 import { configure } from "css"
 
@@ -73,3 +85,7 @@ interface IConfiguration {
   prefix: string
 }
 ```
+
+## TODO
+
+- [] SSR support
