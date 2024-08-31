@@ -1,6 +1,6 @@
 {
   "name": "@elucidata/css",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "module": "index.ts",
   "type": "module",
   "description": "Co-locate your CSS with your components. For use in React/Preact/Vanilla... Probably SolidJS too.",
@@ -12,8 +12,9 @@
     "url": "git+https://github.com/elucidata/css.git"
   },
   "scripts": {
-    "build": "rm -rf dist && tsup index.ts react/index.ts preact/index.ts  --minify --format esm --dts",
-    "prepublish": "bun run build",
+    "dist": "rm -rf dist && tsup ./index.ts ./react/index.ts ./preact/index.ts --no-splitting --minify --format esm --dts",
+    "prepublish": "bun run dist",
+    "stats": "gzip -c9 dist/index.js | wc -c | numfmt --to=si",
     "test": "bun test"
   },
   "devDependencies": {
@@ -22,9 +23,7 @@
     "bun-types": "latest"
   },
   "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
-  "optionalDependencies": {
+    "typescript": "^5.0.0",
     "@types/react": "^18.3.4",
     "preact": "^10.23.1",
     "react": "^18.3.1"

@@ -2,6 +2,8 @@
 
 Co-locate your CSS with your components. For use in React/Preact/Vanilla... Probably SolidJS too.
 
+<small>Minify+Gzip < 2kB</small>
+
 ## Installation
 
 ```
