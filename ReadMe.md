@@ -13,7 +13,7 @@ Or npm, pnpm, yarn... Whatever.
 ## Example Usage
 
 ```tsx
-import { css } from "css"
+import { css } from "@elucidata/css"
 
 const Button = (props) => (
   <button className={Button.styles("Button")}>{props.children}</button>
@@ -32,7 +32,7 @@ The configurable token `&&` will be replaced with a unique name based on the has
 Also supports creating inline components.
 
 ```tsx
-import { comp } from "css/react"
+import { comp } from "@elucidata/css/react"
 
 const Card = comp("div.Card").css`
   border: 1px solid silver;
@@ -56,7 +56,7 @@ Styles using the syntax are scoped to the component.
 ## Configuration
 
 ```tsx
-import { configure } from "css"
+import { configure } from "@elucidata/css"
 
 configure({
   // defaults:
